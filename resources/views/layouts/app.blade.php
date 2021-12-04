@@ -16,7 +16,7 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans bg-gray-background text-gray-900 text-sm">
+    <body class="font-sans text-gray-900 text-sm" style="background-color: #f2f2f2">
     <header> 
         <div class="flex item-center justify-between px-8 py-4">
             <a href="#">Laracasts Logo</a>
@@ -55,10 +55,18 @@
         <div style="max-width:700px">
             <nav class="flex item-center justify-between text-xs">
                 <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
-                    <li><a href="" class="border-b-4 pb-3" style="border-color:blue">All Ideas (87)</a></li>
-                    <li><a href="" class="">All Ideas (87)</a></li>
+                    <li><a href="" class="border-b-3 pb-3" style="border-color:blue">All Ideas (87)</a></li>
+                    <li><a href="" class="text-gray-400 transition duration-150 ease-in border-b-3 pb-3 hover:border-blue">Considering (6)</a></li>
+                    <li><a href="" class="text-gray-400 transition duration-150 ease-in border-b-3 pb-3 hover:border-blue">In Progress (1)</a></li>
+                </ul>
+                <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10" style="margin-left:20">
+                    <li><a href="" class="border-b-3 pb-3 text-gray-400 transiion duration-150 ease-in hover:border-blue" style="border-color:blue">Incomplete (87)</a></li>
+                    <li><a href="" class="text-gray-400 transition duration-150 ease-in border-b-3 pb-3 hover:border-blue">Closed (55)</a></li>
                 </ul>
             </nav>
+            <div class="mt-10">
+                {{ $slot }}
+            </div>
         </div>
     </main>
     </body>
